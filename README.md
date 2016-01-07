@@ -18,6 +18,11 @@ Step1:
 Setup MSLync SDN API environment
 
 Step2:
+Copy all the files in the project to a single directory
+Install PyEZ libraries; "pip install junos-eznc"
+
+
+Step2:
 Run "python eventFlask.py"
 This script will start the web service on 8080 that listens for the messages from the SDN Manager and queues the events for processing
 
@@ -29,7 +34,6 @@ The "lCentralMain" function takes the events and locates the switches on which t
 Step4:
 Run "python cqMonitor.py"
 This script checks the config queue every 60 seconds looking for new configuration events. If there are any messages in the config queue, it pulls the messages and push the appropriate configuration to the switches.
-
 
 
 
