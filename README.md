@@ -18,7 +18,7 @@ Step1:
 Setup MSLync SDN API environment
 
 Step2:
-Copy all the files in the project to a single directory
+Copy all the files in the project to a single directory;
 Install PyEZ libraries; "pip install junos-eznc"
 
 
