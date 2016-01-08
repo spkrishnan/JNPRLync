@@ -7,7 +7,7 @@
 from flask import Flask, request, make_response, json
 import sys
 from lxml import etree as ET
-import eventQueue as EQ
+from ljunlib import eventQueue
 
 app = Flask(__name__)
 
@@ -15,7 +15,8 @@ app = Flask(__name__)
 
 def lFlask():
 	data = request.get_data()
-	EQ.eventQueue(data)	
+	eventQueue(data)
+	print data
 	return "Success"
 
 
