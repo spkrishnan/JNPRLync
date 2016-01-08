@@ -1,0 +1,10 @@
+set firewall family ethernet-switching filter lPrioritize term lAudio from source-address {{lIP}}/32
+set firewall family ethernet-switching filter lPrioritize term lAudio from source-port {{lPort}}
+set firewall family ethernet-switching filter lPrioritize term lAudio from source-address 1.1.1.1/32
+set firewall family ethernet-switching filter lPrioritize term lAudio then forwarding-class expedited-forwarding
+set firewall family ethernet-switching filter lPrioritize term lAudio then loss-priority low
+set firewall family ethernet-switching filter lPrioritize term All_Traffic then accept
+
+
+
+set interfaces {{lInt}} unit 0 family ethernet-switching filter input lPrioritize
