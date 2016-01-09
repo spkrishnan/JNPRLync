@@ -24,7 +24,7 @@ Install PyEZ libraries; "pip install junos-eznc".
 
 Step2:
 Run "python eventFlask.py"; 
-This script will start the web service on 8080 that listens for the messages from the SDN Manager and queues the events for processing
+This script will start the web service on 8000 that listens for the messages from the SDN Manager and queues the events for processing
 
 Step3:
 Run "python eqMonitor.py"; 
